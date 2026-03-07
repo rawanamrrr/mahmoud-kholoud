@@ -8,6 +8,7 @@ export async function POST(request: Request) {
   try {
     const formData = await request.formData();
     const name = formData.get('name') as string;
+    const message = formData.get('message') as string;
     const smtpUser = process.env.SMTP_USER || process.env.GMAIL_USER || '';
     const smtpPass = process.env.SMTP_PASS || process.env.GMAIL_APP_PASSWORD || process.env.GOOGLE_APP_PASSWORD || '';
     const toEmail = process.env.CONTACT_EMAIL || smtpUser || '';
@@ -73,20 +74,34 @@ export async function POST(request: Request) {
     let info;
     try {
       info = await transporter.sendMail({
-        from: `"Engagement Website" <${smtpUser}>`,
+        from: `"Wedding Website" <${smtpUser}>`,
         to: toEmail,
         subject: `New Message from ${name}`,
         html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #4f46e5;">You've received a new message!</h2>
-          <p><strong>From:</strong> ${name}</p>
-          <p>Here's the handwritten message:</p>
-          ${imageFile ? 
-            `<div style="margin: 20px 0; padding: 15px; background: #f9fafb; border-radius: 8px;">
-              <img src="cid:handwritten-message" alt="Handwritten message" style="max-width: 100%; height: auto;" />
-            </div>` : 
-            '<p>No image was attached to this message.</p>'
-          }
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; background-color: #ffffff;">
+          <h2 style="color: #9CA89A; border-bottom: 2px solid #9CA89A; padding-bottom: 10px; margin-top: 0;">New Wedding Message!</h2>
+          <div style="margin-top: 20px;">
+            <p style="font-size: 16px; color: #374151;"><strong>From:</strong> ${name}</p>
+            
+            ${message ? `
+            <div style="margin: 20px 0; padding: 15px; background: #f9fafb; border-left: 4px solid #9CA89A; border-radius: 4px;">
+              <p style="margin: 0; font-size: 16px; color: #1f2937; line-height: 1.6;">${message.replace(/\n/g, '<br>')}</p>
+            </div>
+            ` : ''}
+
+            ${imageFile ? 
+              `<div style="margin: 20px 0;">
+                <p style="font-size: 16px; color: #374151; margin-bottom: 10px;"><strong>Handwritten Note:</strong></p>
+                <div style="padding: 10px; background: #ffffff; border: 1px dashed #9CA89A; border-radius: 8px;">
+                  <img src="cid:handwritten-message" alt="Handwritten message" style="max-width: 100%; height: auto; display: block;" />
+                </div>
+              </div>` : 
+              ''
+            }
+          </div>
+          <footer style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 12px;">
+            Sent from Mahmoud & Gehad Wedding Website
+          </footer>
         </div>
       `,
         attachments
