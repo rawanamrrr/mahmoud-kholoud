@@ -25,27 +25,27 @@ const amiri = Amiri({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahmoud-kholoud.digitivaa.com"),
-  title: "Mahmoud & Gehad Wedding",
-  description: "Celebrating the wedding of Mahmoud & Gehad",
+  title: "Mahmoud & Kholoud Wedding",
+  description: "Celebrating the wedding of Mahmoud & Kholoud",
   generator: "Digitiva",
   openGraph: {
     url: "https://mahmoud-kholoud.digitivaa.com/",
     type: "website",
-    title: "Mahmoud & Gehad Wedding",
-    description: "Celebrating the wedding of Mahmoud & Gehad",
+    title: "Mahmoud & Kholoud Wedding",
+    description: "Celebrating the wedding of Mahmoud & Kholoud",
     images: [
       {
         url: "https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg",
         width: 1200,
         height: 630,
-        alt: "Mahmoud & Gehad Wedding Invitation",
+        alt: "Mahmoud & Kholoud Wedding Invitation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mahmoud & Gehad Wedding",
-    description: "Celebrating the wedding of Mahmoud & Gehad",
+    title: "Mahmoud & Kholoud Wedding",
+    description: "Celebrating the wedding of Mahmoud & Kholoud",
     images: ["https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg"],
   },
   icons: {
@@ -65,21 +65,21 @@ export default function RootLayout({
         {/* ✅ Open Graph tags for Facebook & WhatsApp previews */}
         <meta property="og:url" content="https://mahmoud-kholoud.digitivaa.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Mahmoud & Gehad Wedding" />
-        <meta property="og:description" content="Celebrating the wedding of Mahmoud & Gehad" />
+        <meta property="og:title" content="Mahmoud & Kholoud Wedding" />
+        <meta property="og:description" content="Celebrating the wedding of Mahmoud & Kholoud" />
         <meta
           property="og:image"
           content="https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Mahmoud & Gehad Wedding Invitation" />
+        <meta property="og:image:alt" content="Mahmoud & Kholoud Wedding Invitation" />
         {/* Removed invalid fb:app_id since it's not needed for basic sharing */}
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mahmoud & Gehad Wedding" />
-        <meta name="twitter:description" content="Celebrating the wedding of Mahmoud & Gehad" />
+        <meta name="twitter:title" content="Mahmoud & Kholoud Wedding" />
+        <meta name="twitter:description" content="Celebrating the wedding of Mahmoud & Kholoud" />
         <meta name="twitter:image" content="https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg" />
 
         {/* Preload critical images for immediate loading */}

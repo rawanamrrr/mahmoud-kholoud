@@ -100,7 +100,7 @@ export async function POST(request: Request) {
             }
           </div>
           <footer style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 12px;">
-            Sent from Mahmoud & Gehad Wedding Website
+            Sent from Mahmoud & Kholoud Wedding Website
           </footer>
         </div>
       `,
