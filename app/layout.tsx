@@ -24,29 +24,29 @@ const amiri = Amiri({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zeyadandrawan.site"),
-  title: "Welcome to Our Beginning",
-  description: "Celebrating the start of our journey together",
+  metadataBase: new URL("https://mahmoud-kholoud.digitivaa.com"),
+  title: "Mahmoud & Gehad Wedding",
+  description: "Celebrating the wedding of Mahmoud & Gehad",
   generator: "Digitiva",
   openGraph: {
-    url: "https://zeyadandrawan.site/",
+    url: "https://mahmoud-kholoud.digitivaa.com/",
     type: "website",
-    title: "Welcome to Our Beginning",
-    description: "Celebrating the start of our journey together",
+    title: "Mahmoud & Gehad Wedding",
+    description: "Celebrating the wedding of Mahmoud & Gehad",
     images: [
       {
-        url: "https://zeyadandrawan.site/invitation-design-arabic.jpg",
+        url: "https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg",
         width: 1200,
         height: 630,
-        alt: "Our Engagement Invitation",
+        alt: "Mahmoud & Gehad Wedding Invitation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Welcome to Our Beginning",
-    description: "Celebrating the start of our journey together",
-    images: ["https://zeyadandrawan.site/invitation-design-arabic.jpg"],
+    title: "Mahmoud & Gehad Wedding",
+    description: "Celebrating the wedding of Mahmoud & Gehad",
+    images: ["https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg"],
   },
   icons: {
     icon: "/invitation-design-arabic.jpg",
@@ -63,24 +63,24 @@ export default function RootLayout({
     <html lang="ar" dir="rtl">
       <head>
         {/* ✅ Open Graph tags for Facebook & WhatsApp previews */}
-        <meta property="og:url" content="https://zeyadandrawan.site/" />
+        <meta property="og:url" content="https://mahmoud-kholoud.digitivaa.com/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Welcome to Our Beginning" />
-        <meta property="og:description" content="Celebrating the start of our journey together" />
+        <meta property="og:title" content="Mahmoud & Gehad Wedding" />
+        <meta property="og:description" content="Celebrating the wedding of Mahmoud & Gehad" />
         <meta
           property="og:image"
-          content="https://zeyadandrawan.site/invitation-design-arabic.jpg"
+          content="https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg"
         />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Our Engagement Invitation" />
+        <meta property="og:image:alt" content="Mahmoud & Gehad Wedding Invitation" />
         {/* Removed invalid fb:app_id since it's not needed for basic sharing */}
 
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Welcome to Our Beginning" />
-        <meta name="twitter:description" content="Celebrating the start of our journey together" />
-        <meta name="twitter:image" content="https://zeyadandrawan.site/invitation-design-arabic.jpg" />
+        <meta name="twitter:title" content="Mahmoud & Gehad Wedding" />
+        <meta name="twitter:description" content="Celebrating the wedding of Mahmoud & Gehad" />
+        <meta name="twitter:image" content="https://mahmoud-kholoud.digitivaa.com/invitation-design-arabic.jpg" />
 
         {/* Preload critical images for immediate loading */}
         <link
@@ -89,12 +89,12 @@ export default function RootLayout({
           as="image"
           type="image/jpg"
         />
-        {/* Preload GIF with high priority to eliminate lag on Netlify */}
+        {/* Preload main invitation image */}
         <link
           rel="preload"
-          href="/invitation-design.gif"
+          href="/invitation-design.png"
           as="image"
-          type="image/gif"
+          type="image/png"
         />
         {/* Preconnect to domains for faster loading */}
         <link rel="preconnect" href="https://maps.googleapis.com" />
